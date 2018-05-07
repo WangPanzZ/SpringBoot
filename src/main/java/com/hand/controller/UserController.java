@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 /**
  * @author WangPan
  * @title UserController
- * @description (描述此类的功能)
+ * @description
  * @date: 2018/4/24 13:05
  */
 @Controller
