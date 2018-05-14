@@ -14,9 +14,9 @@ import org.springframework.transaction.annotation.Transactional;
 @SpringBootTest
 public class SpringbootApplicationTests {
 
-    /*@Test
+    @Test
     public void contextLoads() {
-    }*/
+    }
 
     @Autowired
     private UserDemoMapper userDemoMapper;
