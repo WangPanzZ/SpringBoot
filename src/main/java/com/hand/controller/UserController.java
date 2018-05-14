@@ -21,6 +21,11 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    /*method - 指定请求的方法类型：POST/GET/DELETE/PUT 等
+    value - 指定实际的请求地址
+    consumes - 指定处理请求的提交内容类型，例如 Content-Type 头部设置application/json, text/html
+    produces - 指定返回的内容类型*/
+
     @ResponseBody
     @RequestMapping(value = "/add", produces = {"application/json;charset=UTF-8"},method = RequestMethod.POST)
     public int addUser(User user){
