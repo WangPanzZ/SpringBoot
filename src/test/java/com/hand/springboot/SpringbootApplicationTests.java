@@ -21,12 +21,12 @@ public class SpringbootApplicationTests {
     @Autowired
     private UserDemoMapper userDemoMapper;
 
-    /*@Test
+    @Test
     public void test(){
         userDemoMapper.insert("周杰伦", "123456", "17018022508");
-        UserDemo u = userDemoMapper.findUserByPhone("17018022508");
-        Assert.assertEquals("周杰伦", u.getUserName());
-    }*/
+        /*UserDemo u = userDemoMapper.findUserByPhone("17018022508");
+        Assert.assertEquals("周杰伦", u.getUserName());*/
+    }
 
     @Test
     @Transactional
