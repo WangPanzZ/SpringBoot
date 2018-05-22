@@ -54,13 +54,9 @@ public class RedisCacheConfig extends CachingConfigurerSupport {
         redisStandaloneConfiguration.setPort(port);
         redisStandaloneConfiguration.setDatabase(database);
         redisStandaloneConfiguration.setPassword(RedisPassword.of(password));
-
         JedisClientConfigurationBuilder jedisClientConfiguration = JedisClientConfiguration.builder();
-        jedisClientConfiguration.connectTimeout(Duration.ofSeconds(timeout));// 60s connection timeout
-
-        JedisConnectionFactory jedisConFactory = new JedisConnectionFactory(redisStandaloneConfiguration,
-                jedisClientConfiguration.build());
-
+        jedisClientConfiguration.connectTimeout(Duration.ofSeconds(timeout));
+        JedisConnectionFactory jedisConFactory = new JedisConnectionFactory(redisStandaloneConfiguration, jedisClientConfiguration.build());
         return jedisConFactory;
     }
 
